@@ -1,0 +1,52 @@
+{
+  "name": "video-chat-demo",
+  "version": "0.1.0",
+  "description": "A simple video chat demo",
+  "main": "src/index.html",
+  "dependencies": {
+    "js-cookie": "^2.2.1",
+    "pubnub": "^4.27.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-feather": "^2.0.3",
+    "simple-peer": "^9.6.2",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@types/jest": "^25.1.4",
+    "@types/js-cookie": "^2.2.5",
+    "@types/node": "^13.9.2",
+    "@types/pubnub": "^4.27.2",
+    "@types/react": "^16.9.25",
+    "@types/react-dom": "^16.9.5",
+    "@types/simple-peer": "^9.6.0",
+    "@types/uuid": "^7.0.2",
+    "concurrently": "^5.1.0",
+    "jest": "^25.1.0",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "dev": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
+    "start": "parcel ./src/index.html",
+    "build": "npm run type-check && parcel build ./src/index.html --public-url '/' && cp _redirects dist/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesseditson/video-chat-demo.git"
+  },
+  "author": "Jesse Ditson <jesse.ditson@gmail.com>",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/jesseditson/video-chat-demo/issues"
+  },
+  "homepage": "https://github.com/jesseditson/video-chat-demo#readme"
+}

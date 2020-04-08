@@ -1,0 +1,14 @@
+#video-chat {
+    background-color: black;
+    left: 0;
+    right: 0;
+    display: flex;
+    max-height: 200px;
+    .video {
+        border: 1px solid #ccc;
+        flex: 1;
+        video {
+            width: 100%;
+        }
+    }
+}
